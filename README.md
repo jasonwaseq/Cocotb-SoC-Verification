@@ -1,3 +1,3 @@
-# Lab Assignment 7
+# Cocotb SoC Verification
 
-Click `Code` > `Codespaces` > `Create codespace on main` to start coding!
+I built and verified two small SoC-style systems that interface with a host computer over UART. For the uart-axis system, I integrated Alex Forencich’s UART-to-AXIS module with AXI-Stream width adapters to expand incoming UART bytes to 32-bit words and compress them back. I developed a fully automated cocotb testbench using cocotbext-uart to drive UART transactions, perform end-to-end loopback tests, and validate AXIS behavior. I also designed an AXIS snooper module that activated an LED upon receiving a 32-bit encoded version of my birthday and turned it off upon receiving 0xC0C0FFEE, verifying functionality in both simulation and FPGA hardware. For the uart-axi system, I connected a UART-to-AXI debug bridge to an AXI RAM and GPIO interface, then built cocotb tests to issue AXI reads/writes, validate LED control, monitor button states, and confirm correct memory operation across different addresses. Finally, I deployed both systems on the FPGA and demonstrated complete bi-directional communication between the host and the SoC.
