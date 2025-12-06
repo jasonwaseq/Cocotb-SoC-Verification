@@ -1,0 +1,13 @@
+{
+    "top": "uart_axis",
+    "files":
+    ["part3/uart-axis/uart_axis.sv",
+     "provided/dff.sv",
+     "provided/inv.sv",
+     "part3/uart-axis/pll.sv",
+     "part3/uart-axis/uart_rx.sv",
+     "part3/uart-axis/uart_tx.sv",
+     "part3/uart-axis/uart.sv",
+     "part3/uart-axis/axis_adapter.sv"
+    ]
+}
